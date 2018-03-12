@@ -1,1 +1,1 @@
-from datum.datum import Datum
+from pydatum.datum import Datum
