@@ -2,6 +2,6 @@
 @echo off
 cls
 
-pylint asset_allocation --output-format=colorized
+pylint datum --output-format=colorized
 
 ::pause
