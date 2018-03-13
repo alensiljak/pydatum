@@ -18,7 +18,7 @@ def test_add_days():
     datum.today()
     datum.start_of_day()
 
-    # today_str = datum.get_iso_date_string()
+    # TODO this will fail at the end of the month!
     today = datetime.today()
     day = today.day + 1
     tomorrow = today.replace(day=day, hour=0, minute=0, second=0, microsecond=0)
