@@ -1,4 +1,7 @@
-""" Datetime utilities similar to Joda Time or Calendar in Java """
+"""
+Datetime utilities similar to Joda Time or Calendar in Java 
+See https://pymotw.com/2/datetime/ for more arithmetic.
+"""
 import calendar
 from datetime import date, datetime, time, timedelta
 from logging import DEBUG, log
@@ -13,7 +16,7 @@ class Datum:
     """ Encapsulates datetime value and provides operations on top of it """
 
     def __init__(self):
-        self.value = datetime()
+        self.value = datetime.now()
 
     def add_days(self, days: int) -> datetime:
         """ Adds days """
