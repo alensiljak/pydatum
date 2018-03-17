@@ -64,7 +64,7 @@ class Datum:
 
     def get_day(self) -> int:
         """ Returns the day value """
-        return self.value.day()
+        return self.value.day
 
     def get_day_name(self) -> str:
         """ Returns the day name """
