@@ -40,6 +40,8 @@ class Datum:
 
     def from_date(self, value: date) -> datetime:
         """ Initializes from the given date value """
+        assert isinstance(value, date)
+
         #self.value = datetime.combine(value, time.min)
         self.value = datetime(value.year, value.month, value.day)
         return self.value
@@ -78,6 +80,14 @@ class Datum:
     def get_iso_string(self) -> str:
         """ Returns full ISO string for the given date """
         return datetime.isoformat(self.value)
+
+    def get_month(self) -> int:
+        """ Returns the year """
+        return self.value.month
+
+    def get_year(self) -> int:
+        """ Returns the year """
+        return self.value.year
 
     def end_of_day(self) -> datetime:
         """ End of day """
