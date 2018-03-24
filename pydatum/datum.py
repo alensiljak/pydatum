@@ -47,6 +47,8 @@ class Datum:
         return self.value
 
     def from_datetime(self, value: datetime) -> datetime:
+        assert isinstance(value, datetime)
+
         self.value = value
         return self.value
 
@@ -79,6 +81,7 @@ class Datum:
 
     def get_iso_string(self) -> str:
         """ Returns full ISO string for the given date """
+        assert isinstance(self.value, datetime)
         return datetime.isoformat(self.value)
 
     def get_month(self) -> int:
