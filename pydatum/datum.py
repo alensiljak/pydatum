@@ -57,6 +57,7 @@ class Datum:
     def from_iso_long_date(self, date_str: str) -> datetime:
         """ Parse ISO date string (YYYY-MM-DDTHH:mm:ss) """
         assert isinstance(date_str, str)
+        assert len(date_str) == 19
 
         self.value = datetime.strptime(date_str, ISO_LONG_FORMAT)
         return self.value
