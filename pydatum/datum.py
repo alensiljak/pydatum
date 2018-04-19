@@ -9,7 +9,8 @@ from logging import DEBUG, log
 from dateutil.relativedelta import relativedelta
 
 ISO_DATE_FORMAT = "%Y-%m-%d"
-ISO_LONG_FORMAT = "%Y-%m-%dT%H:%M:%S.%fZ"
+ISO_LONG_FORMAT = "%Y-%m-%dT%H:%M:%S"
+ISO_FULL_FORMAT = "%Y-%m-%dT%H:%M:%S.%fZ"
 
 
 class Datum:
