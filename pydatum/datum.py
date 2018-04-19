@@ -34,6 +34,7 @@ class Datum:
         copy.from_datetime(self.value)
         return copy
 
+    @property
     def date(self) -> date:
         """ Returns the date value """
         return self.value.date()
