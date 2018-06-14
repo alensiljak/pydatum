@@ -40,6 +40,11 @@ class Datum:
         """ Returns the date value """
         return self.value.date()
 
+    @property
+    def time(self) -> time:
+        """ The time value """
+        return self.value.time()
+
     def from_date(self, value: date) -> datetime:
         """ Initializes from the given date value """
         assert isinstance(value, date)

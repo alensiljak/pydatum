@@ -9,12 +9,12 @@ To publish the package, run
 
 ### Test Site
 
-```
+```console
 python setup.py sdist upload -r test
 ```
 
 ### Production Site
 
-```
+```console
 python setup.py sdist upload -r pypi
 ```
