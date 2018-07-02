@@ -84,10 +84,16 @@ class Datum:
         return calendar.day_name[weekday]
 
     def get_iso_date_string(self):
+        return self.to_iso_date_string()
+
+    def to_iso_date_string(self):
         """ Gets the iso string representation of the given date """
         return self.value.strftime(ISO_DATE_FORMAT)
 
     def get_iso_string(self) -> str:
+        return self.to_iso_string()
+
+    def to_iso_string(self) -> str:
         """ Returns full ISO string for the given date """
         assert isinstance(self.value, datetime)
         return datetime.isoformat(self.value)
