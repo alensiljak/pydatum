@@ -164,14 +164,13 @@ class Datum:
         """ Return the iso time string only """
         hour = self.time.hour
         minute = self.time.minute
-        return f"{hour}:{minute}"
+        return f"{hour:02}:{minute:02}"
 
     def to_iso_time_string(self) -> str:
         """ Return the iso time string only """
-        hour = self.time.hour
-        minute = self.time.minute
+        short_time = self.to_short_time_string()
         second = self.time.second
-        return f"{hour}:{minute}:{second}"
+        return f"{short_time}:{second:02}"
     
     def to_datetime_string(self) -> str:
         """ Returns a human-readable string representation with iso date and time """
