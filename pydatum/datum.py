@@ -160,6 +160,25 @@ class Datum:
         self.value = self.value - relativedelta(months=months)
         return self.value
 
+    def to_short_time_string(self) -> str:
+        """ Return the iso time string only """
+        hour = self.time.hour
+        minute = self.time.minute
+        return f"{hour}:{minute}"
+
+    def to_iso_time_string(self) -> str:
+        """ Return the iso time string only """
+        hour = self.time.hour
+        minute = self.time.minute
+        second = self.time.second
+        return f"{hour}:{minute}:{second}"
+    
+    def to_datetime_string(self) -> str:
+        """ Returns a human-readable string representation with iso date and time """
+        date_display = self.to_iso_date_string()
+        time_display = self.to_short_time_string()
+        return f"{date_display} {time_display}"
+
     def today(self) -> datetime:
         """ Returns today (date only) as datetime """
         self.value = datetime.combine(datetime.today().date(), time.min)
@@ -169,3 +188,10 @@ class Datum:
         """ Set the value to yesterday """
         self.value = datetime.today() - timedelta(days=1)
         return self.value
+
+    def __repr__(self):
+        """ string representation """
+        #iso_str = self.to_iso_string()
+        datetime_str = self.to_datetime_string()
+
+        return f"{datetime_str}"
