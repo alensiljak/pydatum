@@ -17,7 +17,7 @@ class Datum:
     """ Encapsulates datetime value and provides operations on top of it """
 
     def __init__(self):
-        self.value = datetime.now()
+        self.value: datetime = datetime.now()
 
     @staticmethod
     def parse(value: str):
