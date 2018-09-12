@@ -19,6 +19,15 @@ class Datum:
     def __init__(self):
         self.value = datetime.now()
 
+    @staticmethod
+    def parse(value: str):
+        """ Parse date string. Currently only ISO strings supported yyyy-mm-dd. """
+        result = Datum()
+
+        result.from_iso_date_string(value)
+
+        return result
+
     def add_days(self, days: int) -> datetime:
         """ Adds days """
         self.value = self.value + relativedelta(days=days)
