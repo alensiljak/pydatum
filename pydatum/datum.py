@@ -189,13 +189,17 @@ class Datum:
         return f"{short_time}:{second:02}"
 
     def to_datetime_string(self) -> str:
-        """ Returns a human-readable string representation with iso date and time """
+        """ Returns a human-readable string representation with iso date and time
+        Example: 2018-12-06 12:32:56
+        """
         date_display = self.to_iso_date_string()
         time_display = self.to_long_time_string()
         return f"{date_display} {time_display}"
 
     def to_long_datetime_string(self) -> str:
-        """ Returns the long date/time string """
+        """ Returns the long date/time string 
+        Example: 2018-12-06 12:34
+        """
         date_display = self.to_iso_date_string()
         time_display = self.to_short_time_string()
         return f"{date_display} {time_display}"
