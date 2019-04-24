@@ -4,7 +4,7 @@ See https://pymotw.com/2/datetime/ for more arithmetic.
 """
 import calendar
 from datetime import date, datetime, time, timedelta
-from logging import DEBUG, log
+#from logging import DEBUG, log
 
 from dateutil.relativedelta import relativedelta
 
@@ -53,6 +53,11 @@ class Datum:
     def time(self) -> time:
         """ The time value """
         return self.value.time()
+
+    @property
+    def datetime(self) -> datetime:
+        ''' The datetime value. '''
+        return self.value
 
     def from_date(self, value: date) -> datetime:
         """ Initializes from the given date value """
