@@ -175,23 +175,23 @@ class Datum:
         return self.value
 
     def to_short_time_string(self) -> str:
-        """ Return the iso time string only """
+        """ Return the iso time string only. i.e. 22:33 """
         hour = self.time.hour
         minute = self.time.minute
         return f"{hour:02}:{minute:02}"
 
     def to_long_time_string(self) -> str:
-        """ Return the iso time string only """
+        """ Return the iso time string only. i.e. """
         hour = self.time.hour
         minute = self.time.minute
         second = self.time.second
         return f"{hour:02}:{minute:02}:{second:02}"
 
-    def to_iso_time_string(self) -> str:
-        """ Return the iso time string only """
-        short_time = self.to_short_time_string()
-        second = self.time.second
-        return f"{short_time}:{second:02}"
+    # def to_iso_time_string(self) -> str:
+    #     """ Return the iso time string only. i.e. 22:33:44 """
+    #     short_time = self.to_short_time_string()
+    #     second = self.time.second
+    #     return f"{short_time}:{second:02}"
 
     def to_datetime_string(self) -> str:
         """ Returns a human-readable string representation with iso date and time
@@ -202,7 +202,7 @@ class Datum:
         return f"{date_display} {time_display}"
 
     def to_long_datetime_string(self) -> str:
-        """ Returns the long date/time string 
+        """ Returns the long date/time string
         Example: 2018-12-06 12:34
         """
         date_display = self.to_iso_date_string()
